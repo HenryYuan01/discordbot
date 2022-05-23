@@ -17,6 +17,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
+          // create button, opens link when clicked 
           <button onClick={() => window.open("http://localhost:4000/auth/discord", "_self") } >Login</button>
         </p>
       </main>

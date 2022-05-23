@@ -1,11 +1,14 @@
+// import libraries 
 const passport = require("passport"); 
 var DiscordStrategy = require("passport-discord").Strategy; 
 const { clientID, clientSecret } = require("../../../config.json"); 
 
+// serialization function 
 passport.serializeUser((user, done) => {
     done(null, user.id); 
 }); 
 
+// use DiscordStrategy to authenticate to Discord 
 passport.use(
     new DiscordStrategy({
         clientID: clientID, 
